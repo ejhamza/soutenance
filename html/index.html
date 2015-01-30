@@ -1,0 +1,107 @@
+<!DOCTYPE html  PUBLIC"-// W3C//DTD HTML 4.01//EN"" http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="statics/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="statics/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="statics/css/grid_12.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="statics/css/slider.css">
+    <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <script src="statics/js/jquery-1.7.min.js"></script>
+    <script src="statics/js/jquery.easing.1.3.js"></script>
+    <script src="statics/js/tms-0.4.x.js"></script>
+    <script>
+		$(document).ready(function(){				   	
+			$('.slider')._TMS({
+				show:0,
+				pauseOnHover:true,
+				prevBu:false,
+				nextBu:false,
+				playBu:false,
+				duration:1000,
+				preset:'fade',
+				pagination:true,
+				pagNums:false,
+				slideshow:7000,
+				numStatus:true,
+				banners:'fromRight',
+				waitBannerAnimation:false,
+				progressBar:false
+			})		
+		});
+		
+		function OnLoad(){
+			document.getElementById("index").className = "home-page current";
+		}
+	</script>
+	
+</head>
+<body onload="OnLoad()">
+  <div class="main">
+ 	{% include 'header.html' %}
+    <section id="content">
+        <div id="slide" class="box-shadow">		
+            <div class="slider">
+                <ul class="items">
+                    <li><img src="statics/images/slider-1.jpg" alt="" /><div class="banner">Le Prochain Niveau De Votre Succès...&nbsp;</div></li>
+                   
+                </ul>
+            </div>	
+        </div>
+        <div class="container_12">
+          <div class="grid_12">
+            <div class="pad-0 border-1">
+                <h2 class="top-1 p0">Nous Allons Vous Montrer La Voie Du Succès!</h2>
+                <p class="p2">Ma-Soutenance est une nouvelle plateforme dédiée particulièrement aux étudiants voulant réussir 
+leurs projets de fin d'études et leurs soutenances. Un accompagnement vers la voie du succès et de réussite!</p>
+            </div>
+            <div class="wrap block-1 pad-1">
+                <div>
+                    <h3>Des rapports</h3>
+                    <img src="statics/images/rapport.png" alt="" class="img-border">
+                    <p style="text-align : justify;">Des exemples de rapports de différentes fillières et branches vous aiderons aux premiers pas de la réalisation de votre mémoire.</p>
+                    <a href="#" class="button">Voir plus</a>
+                </div>
+                <div>
+                    <h3>Des présentations</h3>
+                    <img src="statics/images/presentation.png" alt="" class="img-border">
+                    <p style="text-align : justify;">Impressioner votre audiance par des templates de présentation correcte et fascinante pour laisser une bonne impression chez votre jury et la présence.</p>
+                    <a href="#" class="button">Voir plus</a>
+                </div>
+                <div class="last">
+                    <h3>Des préparations</h3>
+                    <img src="statics/images/preparation.png" alt="" class="img-border">
+                    <p style="text-align : justify;">Ne laissez rien au hasard, quelques jour avant votre soutenance, faites vote check liste et préparer tout ce qu'il vous faut : les imprimés, le buffet et votre toge.</p>
+                    <a href="#" class="button">Voir plus</a>
+                </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="aside">
+            <div class="container_12">	
+                <div class="grid_12">
+                    <div class="pad-2 block-2 wrap">
+                        <div>
+                            <h3 class="p3">Boostez votre PFE!</h3>
+                            <p class="p4" style="text-align : justify;">De la phase de recherche jusqu'au jour de votre soutenance, trouver ici tout les conseils précieux qui vous aiderons amplement dans vos recherches et réalisations.</p>
+                            <a href="#" class="button">Voir</a>
+                        </div>
+                        <div class="last">
+                            <h3 class="p3">Nous Travaillons pour Vous!</h3>
+                            <p class="p4" style="text-align : justify;">Notre équipe jeune, fait de son mieux pour vous aider à réussir votre soutenance, tout ce qu'il vous faut : Conseils, Rapports, Présentations et bien d'autres choses, c'est chez nous.</p>
+                            <a href="#" class="button">Voir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>  
+    </section> 
+  </div>    
+<!--==============================footer=================================-->
+ {% include "footer.html"%}    
+</body>
+</html>
