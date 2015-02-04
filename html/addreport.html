@@ -39,52 +39,38 @@
 		<div class="container_12">
 			<div class="grid_12">
 				<div class="wrap pad-3">
-					<div class="block-5">
-						<h3 class="p5">Recherche Avancée</h3>
-						<form id="form" method="post">
-							<fieldset>
-								<label><input type="text" value="Societe"></label> 
-								<label><input type="text" value="Fillière"></label> 
-								<label><input type="text" value="Domaine"></label> 
+					<div class="block-5"></div>
+					<!-- ========================== Table of reports ============ -->
+					<div class="block-6">
+						<h3>Informations sur le rapport</h3>
+						
+						<form id="form" action="{{upload_url}}" method="POST"
+							enctype="multipart/form-data">
+							<fieldset> 	
+								Societe :<label> <input type="text" name="societe" value="Societe"></label>
+								Filiere :<label><input type="text" name="filiere" value="Filiere"></label>
+								Sujet :<label><textarea type="text" name="sujet" value="Sujet"></textarea></label>
+								<label><input style="" type="file" name="file" value="Fichier"></label><br> 
+								
 								
 								<div class="btns">
-									<a href="#" class="button"
-										onClick="document.getElementById('form').submit()">Send</a>
-									<a href="/addreport" class="button">Partager</a>
+								<input style="color:#fff;background-color:#5bc0de;border-color:#46b8da;height: 40px"  type="submit" name="submit" value="Ajouter">
 								</div>
+								
+							
 							</fieldset>
 						</form>
 					</div>
-					<!-- ========================== Table of reports ============ -->
-					<div class="block-6" style="width:500px">
-						
-						<table class="table table-hover" width="100%" border="1"
-							cellspacing="0" cellpadding="6">
-							<tr class="bg-success">
-								<th>Societe</th>
-								<th>Filiere</th>
-								<th>Lien</th>
-							</tr>
-							{% if list_report %}
-							
-								{% for rapport in list_report%}
-								<tr>
-									<th> {{rapport.societe}} </th>
-									<th> {{rapport.filiere}} </th>
-									<th> {{rapport.sujet}} </th>
-								</tr>
-								{% endfor %}
-							{% endif %}
-								
-						</table>
-					</div>
 				</div>
 			</div>
-
-
+			<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
-		</section>
+	</div>
+
+
+	</div>
+	<div class="clear"></div>
+	</section>
 	</div>
 	{%include "footer.html"%}
 </body>
